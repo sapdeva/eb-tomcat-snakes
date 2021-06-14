@@ -2,19 +2,19 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Git clone') {
             steps {
-                echo 'Building...'
+                echo 'cloning...'
             }
         }
-        stage('Test') {
+        stage('MVN pack') {
             steps {
-                echo 'Testing..'
+                echo 'war building..'
             }
         }
-        stage('Deploy') {
+        stage('unit test') {
             steps {
-                echo 'Deploying....'
+                echo 'unin testing....'
             }
         }
     }

@@ -4,8 +4,7 @@ pipeline {
     stages {
         stage('Git clone') {
             steps {
-                echo 'cloning...'
-                bat 'git clone https://github.com/sapdeva/eb-tomcat-snakes.git'
+                echo 'poll scm testing...'
             }
         }
         stage('MVN pack') {
